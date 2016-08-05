@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header.component';
-import {RecipesComponent} from "./recipes/recipes.component";
-import {ShoppingListComponent} from "./shopping-list";
+import {RecipeService} from "./recipes";
+import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
   moduleId: module.id,
   selector: 'rb-root',
   templateUrl: 'app.component.html',
-  directives: [HeaderComponent, RecipesComponent, ShoppingListComponent]
+  directives: [HeaderComponent, ROUTER_DIRECTIVES],
+  providers: [RecipeService,]
 })
 export class AppComponent {
 

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {RecipeListComponent} from "./recipe-list";
-import {RecipeDetailComponent} from "./recipe-detail";
-import {Recipe} from "./recipe";
+import { Component } from '@angular/core';
+import { RecipeListComponent } from "./recipe-list";
+
+import { ROUTER_DIRECTIVES } from "@angular/router";
 
 
 
@@ -11,11 +11,8 @@ import {Recipe} from "./recipe";
   moduleId: module.id,
   selector: 'rb-recipes',
   templateUrl: 'recipes.component.html',
-  directives: [RecipeListComponent,RecipeDetailComponent]
+  directives: [RecipeListComponent,ROUTER_DIRECTIVES]
 })
-export class RecipesComponent implements OnInit {
-  selectedRecipe: Recipe;
-  ngOnInit() {
-  }
+export class RecipesComponent{
 
 }
